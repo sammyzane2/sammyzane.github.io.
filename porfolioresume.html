@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <style>
+        body {
+            color: #fff;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 100vh;
+            position: relative;
+            animation: colorChange 12s infinite;
+        }
+
+        .nav-bar {
+            position: absolute;
+            top: 0;
+            right: 0;
+            background-color: #333;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-label {
+            color: #fff;
+            text-decoration: none;
+            margin-right: 2cm;
+            cursor: pointer;
+        }
+
+        .nav-label:hover {
+            text-decoration: underline;
+        }
+
+        .main-content {
+            flex-grow: 1;
+            padding: 20px;
+        }
+
+   .profile-image {
+    width: 800px;
+    height: 1400px;
+    border-radius: 100%;
+    background-image: url('sammy.jpg'); /* Check the file extension and path */
+    background-size: cover;
+    background-position: center;
+    /* content: ''; Remove this line */
+    display: block;
+}
+
+
+
+        .hidden {
+            display: none;
+        }
+
+        @keyframes colorChange {
+            0% { background-color: #3498db; }
+            16.67% { background-color: #f3ff77; }
+            33.33% { background-color: #00ff00; }
+            50% { background-color: #333; }
+            66.67% { background-color: #ff1493; }
+            83.33% { background-color: #800000; }
+            100% { background-color: #3498db; }
+        }
+    </style>
+</head>
+<body>
+    <div class="nav-bar">
+        <div class="nav-label" onclick="showContent('home-content')" style="color: #ff5733;">Home</div>
+        <div class="nav-label" onclick="showContent('portfolio-content')" style="color: #ff6b6b;">Portfolio</div>
+        <div class="nav-label" onclick="showContent('resume-content')" style="color: #ffaa00;">Resume</div>
+        <div class="nav-label" onclick="showContent('contact-content')" style="color: #ff1493;">Contact</div>
+    </div>
+    <div class="main-content">
+        <div id="home-content">
+            <h1>Hi, I am Samuel Akech</h1>
+            <p>A web developer, graphic designer, and video editor with a passion for creative work.</p>
+        </div>
+        <div id="portfolio-content" class="hidden">
+            <h1>Portfolio</h1>
+            <!-- Graphic Design Section -->
+            <h2>Graphic Design:</h2>
+            <p>Online Shopping Recommendation:</p>
+            <p>For this project, I designed a visually appealing and user-friendly e-commerce website. My role included creating the logo, product images, and overall branding. The site features seamless navigation, an intuitive shopping cart, and an engaging user experience.</p>
+            <!-- Posters Section -->
+            <h2>Posters:</h2>
+            <p>As a graphic designer, I've crafted eye-catching posters for various events and promotions. Each poster tells a unique story through compelling visuals and text, capturing the essence of the message.</p>
+            <!-- Add images and descriptions of your poster designs here -->
+        </div>
+        <div id="resume-content" class="hidden">
+            <h1>Resume</h1>
+            <!-- Add a link to your resume/CV here -->
+            Samuel Akech
+            Web Developer, Graphic Designer, Video Editor
+
+            Contact Information:
+            Email: zanezed937@gmail.com
+            
+            Summary:
+            I am a versatile creative professional with expertise in web development, graphic design, and video editing. My passion for bringing ideas to life has driven me to successfully complete various projects across different domains. I have a strong ability to create visually appealing and user-friendly digital experiences.
+
+            Experience:
+
+            Web Development:
+            - Designed and developed e-commerce websites, including branding, logo creation, and product image design.
+            - Implemented seamless navigation, intuitive shopping cart functionality, and enhanced user experiences.
+            - Created and maintained personal websites to experiment with innovative design and technology.
+
+            Graphic Design:
+            - Crafted eye-catching posters for various events and promotions.
+            - Developed unique and compelling visual and text content for posters.
+            - Worked on branding and product image design for online shopping websites.
+
+            Video Editing:
+            - Edited promotional videos for businesses, enhancing their online presence and engagement.
+            - Scripted, edited, and incorporated captivating visuals and sound to create impactful promotional content.
+            - Created emotional video montages for special events and personal celebrations, turning moments into memorable narratives.
+
+            Skills:
+            - Web Development: HTML, CSS, JavaScript, Responsive Design
+            - Graphic Design: Adobe Photoshop, Adobe Illustrator, Canva
+            - Video Editing: Adobe Premiere Pro, Final Cut Pro, After Effects
+            - Excellent creativity and attention to detail
+            - Strong problem-solving and communication skills
+
+            Education:
+            - Iam at masters degree level.
+
+            Certifications:
+            - Bachelor of Science in Computer Science.
+
+            Languages:
+            - Fluent in English
+            - Proficient in Kiswahili
+
+            Hobbies:
+            - Photography
+            - Learning new design and development tools
+            
+
+            References available upon request.
+        </div>
+        <div id="contact-content" class="hidden">
+            <h1>Contact</h1>
+            <!-- Add your contact information here -->
+            <p>Email: zanezed937@gmail.com</p>
+            <p>LinkedIn: [Your LinkedIn Profile]</p>
+        </div>
+        <div class="profile-image"></div>
+    </div>
+
+    <script>
+        function showContent(contentId) {
+            const contentSections = document.querySelectorAll('.main-content > div');
+            contentSections.forEach(section => section.classList.add('hidden'));
+            document.getElementById(contentId).classList.remove('hidden');
+        }
+
+        showContent('home-content');
+    </script>
+</body>
+</html>
